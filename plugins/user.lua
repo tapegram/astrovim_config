@@ -21,7 +21,6 @@ return {
   { "rebelot/kanagawa.nvim", name = "kanagawa"},
   { "savq/melange-nvim", name = "melange"},
   { "EdenEast/nightfox.nvim", name = "nightfox"},
-
   {
     'AlexvZyl/nordic.nvim',
     lazy = false,
@@ -30,4 +29,13 @@ return {
         require 'nordic'.load()
     end
   },
+  { 
+    "zbirenbaum/copilot.lua",
+    cmd = "Copilot",
+    event = "InsertEnter",
+    config = function()
+      require("copilot").setup({})
+    end,
+  },
+
 }
