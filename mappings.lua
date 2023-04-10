@@ -20,9 +20,46 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    --
+    -- Rebind Comment to ; from / 
+    ["<leader>/"] = false,
+    ["<leader>;"] = {
+      function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
+      desc = "Comment line",
+    },
+
+    -- Easy bind to "go back" (to previous buffer)
+    -- Based on my muscle memory
+    ["<leader><tab>"] = { 
+      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+      desc = "Previous buffer",
+    },
+
+    -- Rebind Find Theme to Ts
+    ["<leader>ft"] = false,
+    ["<leader>Ts"] =
+    { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
+
+    -- Shortcut for LSP code actions
+    ["<leader>."] = {
+      function() vim.lsp.buf.code_action() end,
+      desc = "LSP code action",
+    },
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
+  v = {
+    -- Rebind Comment to ; from / 
+    ["<leader>/"] = false,
+    ["<leader>;"] = {
+      "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>", desc = "Toggle comment line"
+    },
+    -- Shortcut for LSP code actions
+    ["<leader>."] = {
+      function() vim.lsp.buf.code_action() end,
+      desc = "LSP code action",
+    },
+  }
 }
