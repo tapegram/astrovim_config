@@ -18,10 +18,10 @@ return {
   },
   -- Set colorscheme to use
   -- colorscheme = "astrolight",
-  -- colorscheme = "catppuccin-latte",
+  colorscheme = "catppuccin-latte",
   -- colorscheme = "kanagawa",
   -- colorscheme = "melange",
-  colorscheme = "dayfox",
+  -- colorscheme = "dayfox",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

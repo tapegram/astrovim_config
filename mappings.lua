@@ -37,6 +37,7 @@ return {
 
     -- Rebind Find Theme to Ts
     ["<leader>ft"] = false,
+    ["<leader>T"] = { name = "Toggle" },
     ["<leader>Ts"] =
     { function() require("telescope.builtin").colorscheme { enable_preview = true } end, desc = "Find themes" },
 
@@ -62,6 +63,7 @@ return {
     -- Using spacemacs keybding for msucle memory.
     -- https://www.reddit.com/r/neovim/comments/prs0zr/comment/hdlb3dk/?utm_source=share&utm_medium=web3x
     -- https://github.com/nvim-telescope/telescope.nvim/issues/762#issuecomment-933036711
+    ["<leader>s"] = { name = "search" },
     ["<leader>ss"] = {
       function() require('telescope.builtin').current_buffer_fuzzy_find({fuzzy=false, case_mode=ignore_case}) end,
       desc = "Search in buffer"
