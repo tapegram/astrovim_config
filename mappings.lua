@@ -47,17 +47,23 @@ return {
       desc = "LSP code action",
     },
 
+    -- Show signature help
+    ["<leader>lh"] = {
+      function() vim.lsp.buf.signature_help() end,
+      desc = "Signature help",
+    },
+
     -- Telescope for .git project
     -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966
     -- Gave spacemacs keybinding for muscle memory reasons.
-    ["<leader>pf"] = { 
-      function(opts)
-        opts = opts or {}
-        opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-        require'telescope.builtin'.find_files(opts)
-      end,
-      desc = "Find file in project",
-    },
+    -- ["<leader>pf"] = { 
+    --   function(opts)
+    --     opts = opts or {}
+    --     opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+    --     require'telescope.builtin'.find_files(opts)
+    --   end,
+    --   desc = "Find file in project",
+    -- },
     -- Telescope
     -- Trying to get something similar to swiper -- basically telescope for the current buffer
     -- Using spacemacs keybding for msucle memory.
@@ -65,9 +71,16 @@ return {
     -- https://github.com/nvim-telescope/telescope.nvim/issues/762#issuecomment-933036711
     ["<leader>s"] = { name = "search" },
     ["<leader>ss"] = {
-      function() require('telescope.builtin').current_buffer_fuzzy_find({fuzzy=false, case_mode=ignore_case}) end,
+      function() require('telescope.builtin').current_buffer_fuzzy_find({fuzzy=true, case_mode=ignore_case}) end,
       desc = "Search in buffer"
     },
+    -- Telescope
+    -- Look up buffers!
+    ["<leader>bb"] = false,
+    ["<leader>bb"] = {
+      function() require('telescope.builtin').buffers({fuzzy=true, case_more=ignore_case}) end,
+      desc = "Recent buffers"
+    }
   },
   t = {
     -- setting a mapping to false will disable it

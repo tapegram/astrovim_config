@@ -19,7 +19,7 @@ return {
   -- Set colorscheme to use
   -- colorscheme = "astrolight",
   colorscheme = "catppuccin-latte",
-  -- colorscheme = "kanagawa",
+  -- colorscheme = "kanagawa-lotus",
   -- colorscheme = "melange",
   -- colorscheme = "dayfox",
 
