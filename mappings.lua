@@ -58,17 +58,23 @@ return {
       function() vim.lsp.buf.hover() end,
       desc = "Show type",
     },
+
+    -- Diagnostic for buffer
+    ["<leader>lE"] = {
+      function() require("telescope.builtin").diagnostics({ bufnr = 0 }) end,
+      desc = "Show diagnostics in buffer"
+    },
     -- Telescope for .git project
     -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966
     -- Gave spacemacs keybinding for muscle memory reasons.
-    -- ["<leader>pf"] = { 
-    --   function(opts)
-    --     opts = opts or {}
-    --     opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
-    --     require'telescope.builtin'.find_files(opts)
-    --   end,
-    --   desc = "Find file in project",
-    -- },
+    ["<leader>pf"] = { 
+      function(opts)
+        opts = opts or {}
+        opts.cwd = vim.fn.systemlist("git rev-parse --show-toplevel")[1]
+        require'telescope.builtin'.find_files(opts)
+      end,
+      desc = "Find file in project",
+    },
     -- Telescope
     -- Trying to get something similar to swiper -- basically telescope for the current buffer
     -- Using spacemacs keybding for msucle memory.
