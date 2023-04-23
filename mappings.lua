@@ -53,6 +53,11 @@ return {
       desc = "Signature help",
     },
 
+    -- show hover info (hopefully type)
+    ["<leader>lt"] = {
+      function() vim.lsp.buf.hover() end,
+      desc = "Show type",
+    },
     -- Telescope for .git project
     -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966
     -- Gave spacemacs keybinding for muscle memory reasons.
