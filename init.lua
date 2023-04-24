@@ -17,11 +17,9 @@ return {
     },
   },
   -- Set colorscheme to use
-  -- colorscheme = "astrolight",
   colorscheme = "catppuccin-latte",
-  -- colorscheme = "kanagawa-lotus",
-  -- colorscheme = "melange",
   -- colorscheme = "dayfox",
+  -- colorscheme = "rose-pine-dawn",
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
