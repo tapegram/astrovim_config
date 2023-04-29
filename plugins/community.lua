@@ -9,6 +9,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.project.project-nvim" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { -- further customize the options set by the community
     "copilot.lua",
     opts = {

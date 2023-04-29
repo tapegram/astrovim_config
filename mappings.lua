@@ -64,6 +64,13 @@ return {
       function() require("telescope.builtin").diagnostics({ bufnr = 0 }) end,
       desc = "Show diagnostics in buffer"
     },
+    
+    ["<leader>lF"] = {
+      function() require("telescope.builtin").quickfix({ bufnr = 0 }) end,
+      desc = "Quick fixes"
+    },
+    
+
     -- Telescope for .git project
     -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966
     -- Gave spacemacs keybinding for muscle memory reasons.
@@ -85,12 +92,21 @@ return {
       function() require('telescope.builtin').current_buffer_fuzzy_find({fuzzy=true, case_mode=ignore_case}) end,
       desc = "Search in buffer"
     },
+    -- Live search of project
+    ["<leader>sp"] = {
+      function() require('telescope.builtin').live_grep({fuzzy=true, case_mode=ignore_case}) end,
+      desc = "Search in project"
+    },
     -- Telescope
     -- Look up buffers!
     ["<leader>bb"] = false,
     ["<leader>bb"] = {
       function() require('telescope.builtin').buffers({fuzzy=true, case_more=ignore_case}) end,
       desc = "Recent buffers"
+    },
+    ["<leader>bf"] = {
+      function() require('telescope.builtin').oldfiles({fuzzy=true, case_more=ignore_case}) end,
+      desc = "Recent files"
     }
   },
   t = {
