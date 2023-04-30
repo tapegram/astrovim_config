@@ -17,10 +17,10 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "catppuccin-latte",
-  -- colorscheme = "dayfox",
-  -- colorscheme = "rose-pine-dawn",
-
+  -- colorscheme = "catppuccin-latte",
+  -- colorscheme = "gruvbox",
+  colorscheme = "everforest",
+  
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
