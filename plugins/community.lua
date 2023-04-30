@@ -11,6 +11,7 @@ return {
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
+  { import = "astrocommunity.motion.leap-nvim" },
   { -- further customize the options set by the community
     "copilot.lua",
     opts = {

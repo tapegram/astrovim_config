@@ -6,6 +6,7 @@
 return {
   -- first key is the mode
   n = {
+    ["<leader><tab>"] = { ":e#<cr>", desc = "Previous File"},
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -26,13 +27,6 @@ return {
     ["<leader>;"] = {
       function() require("Comment.api").toggle.linewise.count(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Comment line",
-    },
-
-    -- Easy bind to "go back" (to previous buffer)
-    -- Based on my muscle memory
-    ["<leader><tab>"] = { 
-      function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
-      desc = "Previous buffer",
     },
 
     -- Rebind Find Theme to Ts
@@ -101,10 +95,6 @@ return {
     -- Look up buffers!
     ["<leader>bb"] = false,
     ["<leader>bb"] = {
-      function() require('telescope.builtin').buffers({fuzzy=true, case_more=ignore_case}) end,
-      desc = "Recent buffers"
-    },
-    ["<leader>bf"] = {
       function() require('telescope.builtin').oldfiles({fuzzy=true, case_more=ignore_case}) end,
       desc = "Recent files"
     }
