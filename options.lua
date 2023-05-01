@@ -9,7 +9,7 @@ return {
     wrap = false, -- sets vim.opt.wrap
     showtabline = 0,
     scrolloff = 999,
-    background = "light", -- sets the default background (light or dark). Can be toggled with <leader>ub
+    background = "dark", -- sets the default background (light or dark). Can be toggled with <leader>ub
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
