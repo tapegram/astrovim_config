@@ -21,7 +21,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.scrolling.mini-animate" },
-  { import = "astrocommunity.utility.noice-nvim" },
+  -- { import = "astrocommunity.utility.noice-nvim" },
   {
     "m4xshen/smartcolumn.nvim",
     opts = {

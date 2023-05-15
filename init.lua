@@ -26,6 +26,11 @@ return {
     virtual_text = true,
     underline = true,
   },
+  noice = {
+    presets = {
+      inc_rename = true
+    }
+  },
   lsp = {
     -- customize lsp formatting options
     formatting = {

@@ -40,6 +40,17 @@ return {
       function() vim.lsp.buf.code_action() end,
       desc = "LSP code action",
     },
+    
+    -- Use inc-rename isntead of the default rename behavior
+    ["<leader>lr"] = false,
+    ["<leader>lr"] = {
+      function()
+        require "inc_rename"
+        return ":IncRename " .. vim.fn.expand "<cword>"
+      end,
+      expr = true,
+      desc = "Incremental rename",
+    },
 
     -- Show signature help
     ["<leader>lh"] = {
