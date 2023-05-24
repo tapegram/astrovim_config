@@ -8,7 +8,7 @@ return {
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.colorscheme.rose-pine" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
@@ -21,7 +21,7 @@ return {
   { import = "astrocommunity.pack.typescript" },
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.scrolling.mini-animate" },
-  -- { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
   {
     "m4xshen/smartcolumn.nvim",
     opts = {
