@@ -8,7 +8,7 @@ return {
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.indent.mini-indentscope" },
-  { import = "astrocommunity.lsp.inc-rename" },
+  { import = "astrocommunity.lsp.inc-rename-nvim" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.typescript" },
