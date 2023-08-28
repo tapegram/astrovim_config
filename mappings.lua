@@ -70,6 +70,18 @@ return {
       desc = "Show diagnostics in buffer"
     },
     
+    -- -- Goto next error
+    -- ["<leader>len"] = {
+    --   function() vim.lsp.buf.diagnostics.goto_next() end,
+    --   desc = "Next diagnostic"
+    -- },
+    -- 
+    -- -- Goto prev error
+    -- ["<leader>lep"] = {
+    --   function() vim.lsp.buf.diagnostics.goto_prev() end,
+    --   desc = "Previous diagnostic"
+    -- },
+    
     ["<leader>lF"] = {
       function() require("telescope.builtin").quickfix({ bufnr = 0 }) end,
       desc = "Quick fixes"
@@ -77,7 +89,7 @@ return {
     
 
     -- Telescope for .git project
-    -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966
+    -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789002966kk
     -- Gave spacemacs keybinding for muscle memory reasons.
     ["<leader>pf"] = { 
       function(opts)
