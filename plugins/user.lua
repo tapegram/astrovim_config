@@ -9,19 +9,6 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  -- Themes
-  -- { "catppuccin/nvim", name = "catppuccin"},
     { "sainnhe/everforest", name = "everforest"},
-  -- { "rebelot/kanagawa.nvim", name = "kanagawa"},
-  -- { "savq/melange-nvim", name = "melange"},
-  -- { "EdenEast/nightfox.nvim", name = "nightfox"},
-  -- {
-  --   'AlexvZyl/nordic.nvim',
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --       require 'nordic'.load()
-  --   end
-  -- },
 
 }
