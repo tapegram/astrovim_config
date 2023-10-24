@@ -15,6 +15,7 @@ return {
   { import = "astrocommunity.scrolling.mini-animate" },
   { import = "astrocommunity.note-taking.neorg" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.search.sad-nvim" },
   {
     "m4xshen/smartcolumn.nvim",
     opts = {
