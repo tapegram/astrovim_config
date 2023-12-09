@@ -9,6 +9,17 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+    {
+	    "L3MON4D3/LuaSnip",
+	    build = "make install_jsregexp",
+	    config = function()
+        -- https://github.com/L3MON4D3/LuaSnip/issues/850#issuecomment-1837184505
+        wallchart_snippets = function()
+          require("luasnip.loaders.from_vscode").load_standalone({path = vim.fn.getcwd() .. "/.vscode/snippets.code-snippets", lazy = true})
+        end
+        pcall(wallchart_snippets)
+      end
+    },
     { "sainnhe/everforest", name = "everforest"},
     { 
       "unisonweb/unison",
