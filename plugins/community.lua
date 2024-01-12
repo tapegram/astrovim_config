@@ -7,6 +7,7 @@ return {
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.editing-support.mini-splitjoin" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
+  { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },

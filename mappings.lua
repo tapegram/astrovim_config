@@ -69,18 +69,30 @@ return {
       function() require("telescope.builtin").diagnostics({ bufnr = 0 }) end,
       desc = "Show diagnostics in buffer"
     },
+     
+    -- Diagnostic for buffer
+    ["<leader>leb"] = {
+      function() require("telescope.builtin").diagnostics({ bufnr = 0 }) end,
+      desc = "Show diagnostics in buffer"
+    },
+     
+    -- Diagnostic for buffer in project
+    ["<leader>leD"] = {
+      function() require("telescope.builtin").diagnostics() end,
+      desc = "Show diagnostics in project"
+    },
     
-    -- -- Goto next error
-    -- ["<leader>len"] = {
-    --   function() vim.lsp.buf.diagnostics.goto_next() end,
-    --   desc = "Next diagnostic"
-    -- },
-    -- 
-    -- -- Goto prev error
-    -- ["<leader>lep"] = {
-    --   function() vim.lsp.buf.diagnostics.goto_prev() end,
-    --   desc = "Previous diagnostic"
-    -- },
+    -- Goto next error in bugger
+    ["<leader>len"] = {
+      function() vim.diagnostic.goto_next({ bufnr = 0}) end,
+      desc = "Next diagnostic in buffer"
+    },
+
+    -- Goto prev error
+    ["<leader>lep"] = {
+      function() vim.diagnostic.goto_prev({bufnr = 0}) end,
+      desc = "Previous diagnostic in buffer"
+    },
     
     ["<leader>lF"] = {
       function() require("telescope.builtin").quickfix({ bufnr = 0 }) end,
@@ -118,7 +130,11 @@ return {
     -- Look up buffers!
     ["<leader>bb"] = false,
     ["<leader>bb"] = {
-      function() require('telescope.builtin').oldfiles({fuzzy=true, case_more=ignore_case}) end,
+      function() require('telescope.builtin').oldfiles({
+        fuzzy=true,
+        case_more=ignore_case,
+        cwd_only=true,
+      }) end,
       desc = "Recent files"
     }
   },
