@@ -153,5 +153,11 @@ return {
       function() vim.lsp.buf.code_action() end,
       desc = "LSP code action",
     },
+    -- Chat GPT actions
+    -- https://github.com/jackMort/ChatGPT.nvim?tab=readme-ov-file#chatgpteditwithinstructions
+    ["<leader>g"] = {
+      function() require("chatgpt").edit_with_instructions() end,
+      desc = "GPT Edit with instructions",
+    }
   }
 }
