@@ -136,7 +136,24 @@ return {
         cwd_only=true,
       }) end,
       desc = "Recent files"
+    },
+    -- GPT
+    ["<leader><C-g>c"] = {
+      function() require("chatgpt").openChat() end,
+      desc = "Open chat",
+    },
+    -- ["<leader><C-g>a"] = {
+    --   function() require("chatgpt").run_action() end,
+    --   desc = "Run action",
+    -- },
+    ["<leader><C-g>p"] = {
+      function() require("chatgpt").selectAwesomePrompt() end,
+      desc = "Open chat with awesome prompt",
     }
+    -- ["<leader><C-g>C"] = {
+    --   function() require("chatgpt").complete_code() end,
+    --   desc = "Complete code",
+    -- },
   },
   t = {
     -- setting a mapping to false will disable it
@@ -155,9 +172,13 @@ return {
     },
     -- Chat GPT actions
     -- https://github.com/jackMort/ChatGPT.nvim?tab=readme-ov-file#chatgpteditwithinstructions
-    ["<leader>g"] = {
+    ["<leader><C-g>e"] = {
       function() require("chatgpt").edit_with_instructions() end,
       desc = "GPT Edit with instructions",
+    },
+    ["<leader><C-g>g"] = {
+      "<cmd>ChatGPTRun generate_mappings<CR>",
+      desc = "Generate mappings",
     }
   }
 }

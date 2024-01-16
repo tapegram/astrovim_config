@@ -5,9 +5,16 @@ return {
   { import = "astrocommunity.colorscheme.kanagawa-nvim" },
   { import = "astrocommunity.colorscheme.melange-nvim" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
+  { import = "astrocommunity.editing-support.chatgpt-nvim", 
+    config = function()
+      requre("chatgpt").setup({
+        api_key_cmd = "echo $OPENAI_API_KEY",
+        actions_paths = { "~/chatgpt-actions/actions.json" },
+      })
+    end
+  },
   { import = "astrocommunity.editing-support.mini-splitjoin" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
-  { import = "astrocommunity.editing-support.chatgpt-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },
   { import = "astrocommunity.git.neogit" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
