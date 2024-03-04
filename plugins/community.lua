@@ -13,6 +13,8 @@ return {
       })
     end
   },
+  { import = "astrocommunity.workflow.hardtime-nvim" },
+  { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.editing-support.mini-splitjoin" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
   { import = "astrocommunity.file-explorer.oil-nvim" },

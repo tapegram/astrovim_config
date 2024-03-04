@@ -21,7 +21,7 @@ return {
   -- colorscheme = "gruvbox",
   colorscheme = "everforest",
   -- colorscheme = "kanagawa",
-  -- colorscheme = "melange",
+  -- colorscheme = "deepwhite",
   
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {

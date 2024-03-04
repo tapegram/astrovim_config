@@ -7,6 +7,7 @@ return {
   -- first key is the mode
   n = {
     ["<leader><tab>"] = { ":e#<cr>", desc = "Previous File"},
+    ["<leader>r"] = { ":e<cr>", desc = "Reload File"},
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },

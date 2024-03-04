@@ -9,15 +9,24 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+    { -- https://github.com/Verf/deepwhite.nvim
+        'Verf/deepwhite.nvim',
+        lazy = false,
+        priority = 1000,
+        config = function()
+            vim.cmd [[colorscheme deepwhite]]
+        end,
+    },
     {
 	    "L3MON4D3/LuaSnip",
 	    build = "make install_jsregexp",
 	    config = function()
+        require("luasnip.loaders.from_vscode").lazy_load({ paths = { "~/projects/snippets" } })
         -- https://github.com/L3MON4D3/LuaSnip/issues/850#issuecomment-1837184505
-        wallchart_snippets = function()
-          require("luasnip.loaders.from_vscode").load_standalone({path = vim.fn.getcwd() .. "/.vscode/snippets.code-snippets", lazy = true})
-        end
-        pcall(wallchart_snippets)
+        -- wallchart_snippets = function()
+        --   require("luasnip.loaders.from_vscode").load_standalone({path = vim.fn.getcwd() .. "/.vscode/snippets.code-snippets", lazy = true})
+        -- end
+        -- pcall(wallchart_snippets)
       end
     },
     { "sainnhe/everforest", name = "everforest"},
